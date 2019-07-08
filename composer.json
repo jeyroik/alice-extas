@@ -1,0 +1,14 @@
+{
+  "name": "jeyroik/alice-extas",
+  "description": "Yandex.Alice Extas package",
+  "require": {
+    "jeyroik/extas-foundation": "*",
+    "jeyroik/extas-installer": "*",
+    "jeyroik/extas-base": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "extas\\": "src/"
+    }
+  }
+}

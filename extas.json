@@ -1,0 +1,26 @@
+{
+  "name": "alice.extas",
+  "container_classes": [
+    {
+      "interface": "extas\\interfaces\\yandex\\ISkillRepository",
+      "class": "extas\\components\\yandex\\SkillRepository"
+    }
+  ],
+  "plugins": [
+    {
+      "class": "extas\\components\\plugins\\PluginInstallSkills",
+      "stage": "extas.install"
+    },
+    {
+      "class": "extas\\components\\plugins\\PluginTestSkill",
+      "stage": "alice.skill.test"
+    }
+  ],
+  "skills": [
+    {
+      "name": "test",
+      "description": "Test skill",
+      "id": ""
+    }
+  ]
+}
