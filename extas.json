@@ -22,5 +22,15 @@
       "description": "Test skill",
       "id": ""
     }
+  ],
+  "buttons": [
+    {
+
+    }
+  ],
+  "cards": [
+    {
+
+    }
   ]
 }
