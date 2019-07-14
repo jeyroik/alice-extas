@@ -38,7 +38,12 @@ class Alice extends Item implements IAlice
 
         $response = $this->getResponse($yandexCall);
         if ($skill) {
-            $stage = 'alice.skill.' . $skill->getName();
+            $stage = 'alice.skill.run';
+            foreach ($this->getPluginsByStage($stage) as $plugin) {
+                $plugin($aliceCall, $skill, $response);
+            }
+
+            $stage .= '.' . $skill->getName();
             foreach ($this->getPluginsByStage($stage) as $plugin) {
                 $plugin($aliceCall, $skill, $response);
             }

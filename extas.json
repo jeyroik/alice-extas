@@ -4,33 +4,147 @@
     {
       "interface": "extas\\interfaces\\yandex\\ISkillRepository",
       "class": "extas\\components\\yandex\\SkillRepository"
+    },
+    {
+      "interface": "extas\\interfaces\\yandex\\skills\\steps\\IStepRepository",
+      "class": "extas\\components\\yandex\\skills\\steps\\StepRepository"
+    },
+    {
+      "interface": "extas\\interfaces\\yandex\\skills\\scenarios\\IScenarioRepository",
+      "class": "extas\\components\\yandex\\skills\\scenarios\\ScenarioRepository"
+    },
+    {
+      "interface": "extas\\interfaces\\yandex\\responses\\cards\\ICardRepository",
+      "class": "extas\\components\\yandex\\responses\\cards\\CardRepository"
+    },
+    {
+      "interface": "extas\\interfaces\\yandex\\responses\\buttons\\IButtonRepository",
+      "class": "extas\\components\\yandex\\responses\\buttons\\ButtonRepository"
     }
   ],
   "plugins": [
     {
-      "class": "extas\\components\\plugins\\PluginInstallSkills",
+      "class": "extas\\components\\plugins\\alice\\PluginInstallSkills",
       "stage": "extas.install"
     },
     {
-      "class": "extas\\components\\plugins\\PluginTestSkill",
-      "stage": "alice.skill.test"
+      "class": "extas\\components\\plugins\\alice\\PluginInstallSteps",
+      "stage": "extas.install"
+    },
+    {
+      "class": "extas\\components\\plugins\\alice\\PluginInstallScenarios",
+      "stage": "extas.install"
+    },
+    {
+      "class": "extas\\components\\plugins\\alice\\PluginInstallCards",
+      "stage": "extas.install"
+    },
+    {
+      "class": "extas\\components\\plugins\\alice\\PluginInstallButtons",
+      "stage": "extas.install"
+    },
+    {
+      "class": "extas\\components\\plugins\\alice\\skills\\PluginSkillScenario",
+      "stage": "alice.skill.run"
+    },
+    {
+      "class": "extas\\components\\plugins\\alice\\skills\\steps\\PluginStepDemoHelp",
+      "stage": "test.demo.step.demo.help"
+    },
+    {
+      "class": "extas\\components\\plugins\\alice\\skills\\steps\\PluginStepDemoStart",
+      "stage": "test.demo.step.demo.start"
+    },
+    {
+      "class": "extas\\components\\plugins\\alice\\responses\\PluginResponseCardBuildSingle",
+      "stage": "alice.card.build.BigImage"
+    },
+    {
+      "class": "extas\\components\\plugins\\alice\\responses\\PluginResponseCardBuildList",
+      "stage": "alice.card.build.ItemsList"
+    },
+  ],
+  "extensions": [
+    {
+      "interface": "extas\\interfaces\\extensions\\alice\\cards\\ICardExtensionImageSingle",
+      "class": "extas\\components\\extensions\\alice\\cards\\CardExtensionImageSingle",
+      "subject": "alice.response.card",
+      "methods": [
+        "getImageId", "setImageId"
+      ]
+    },
+    {
+      "interface": "extas\\interfaces\\extensions\\alice\\cards\\ICardExtensionImageList",
+      "class": "extas\\components\\extensions\\alice\\cards\\CardExtensionImageList",
+      "subject": "alice.response.card",
+      "methods": [
+        "getHeader", "getItems", "getFooter", "setHeader", "setItems", "setFooter", "addItem"
+      ]
     }
   ],
   "skills": [
     {
       "name": "test",
       "description": "Test skill",
-      "id": ""
+      "id": "test",
+      "type": "scenario"
     }
   ],
   "buttons": [
     {
-
+      "name": "blg",
+      "title": "Base library Github",
+      "url": "https://github.com/jeyroik/alice-extas",
+      "hide": true,
+      "payload": []
     }
   ],
   "cards": [
     {
-
+      "name": "test.image.single",
+      "type": "BigImage",
+      "title": "Test image",
+      "description": "This is a test image",
+      "button": "blg"
+    },
+    {
+      "name": "test.image.list",
+      "type": "ItemsList",
+      "items": [
+        "test.image.single",
+        "test.image.single",
+        "test.image.single"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "name": "demo.help",
+      "title": "Помощь",
+      "description": "Пользователь запросил помощь"
+    },
+    {
+      "name": "demo.start",
+      "title": "Начало использования",
+      "description": "На этом шаге приветствуем пользователя"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "demo",
+      "title": "Демонстрационный сценарий",
+      "description": "Это демонстрационный сценарий",
+      "skill_name": "test",
+      "schema": {
+        "message_1": [{
+          "condition": "",
+          "step": "demo.start"
+        }],
+        "message_x": [{
+          "condition": "",
+          "step": "demo.help"
+        }]
+      }
     }
   ]
 }

@@ -2,6 +2,7 @@
 namespace extas\components\yandex\responses\buttons;
 
 use extas\components\Item;
+use extas\components\THasName;
 use extas\components\yandex\calls\requests\RequestPayload;
 use extas\interfaces\yandex\calls\requests\IRequestPayload;
 use extas\interfaces\yandex\responses\buttons\IButton;
@@ -14,6 +15,8 @@ use extas\interfaces\yandex\responses\buttons\IButton;
  */
 class Button extends Item implements IButton
 {
+    use THasName;
+
     /**
      * @return string
      */

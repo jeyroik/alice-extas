@@ -3,8 +3,7 @@ namespace extas\components\yandex\responses;
 
 use extas\components\Item;
 use extas\components\yandex\responses\buttons\Button;
-use extas\components\yandex\responses\cards\lists\CardImageList;
-use extas\components\yandex\responses\cards\singles\CardImageSingle;
+use extas\components\yandex\responses\cards\Card;
 use extas\components\yandex\responses\sessions\Session;
 use extas\components\yandex\THasVersion;
 use extas\interfaces\yandex\responses\buttons\IButton;
@@ -82,11 +81,8 @@ class AliceResponse extends Item implements IAliceResponse
     public function getCard(): ICard
     {
         $card = $this->config[static::FIELD__CARD] ?? [];
-        $cardType = $card[ICard::FIELD__TYPE] ?? ICard::TYPE__IMAGE_SINGLE;
 
-        return $cardType == ICard::TYPE__IMAGE_LIST
-            ? new CardImageList($card)
-            : new CardImageSingle($card);
+        return new Card($card);
     }
 
     /**

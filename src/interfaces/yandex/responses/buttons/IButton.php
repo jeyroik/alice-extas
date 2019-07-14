@@ -1,6 +1,7 @@
 <?php
 namespace extas\interfaces\yandex\responses\buttons;
 
+use extas\interfaces\IHasName;
 use extas\interfaces\IItem;
 use extas\interfaces\yandex\calls\requests\IRequestPayload;
 
@@ -10,7 +11,7 @@ use extas\interfaces\yandex\calls\requests\IRequestPayload;
  * @package extas\interfaces\yandex\responses\buttons
  * @author jeyroik@gmail.com
  */
-interface IButton extends IItem
+interface IButton extends IItem, IHasName
 {
     const SUBJECT = 'alice.response.button';
 
