@@ -1,6 +1,6 @@
 {
   "name": "alice.extas",
-  "container_classes": [
+  "package_classes": [
     {
       "interface": "extas\\interfaces\\yandex\\ISkillRepository",
       "class": "extas\\components\\yandex\\SkillRepository"
