@@ -22,7 +22,7 @@ Yandex.Alice Extas package
 - `description`: описание скила, опциональное поле;
 - `id`: идентификатор скилла (см. панель разработчика в диалогах).
 
-2. См. инструкции в `jeyroik/extas-foundation` для базовой подготовки к испольхованию extas'a.
+2. См. инструкции в `jeyroik/extas-foundation` для базовой подготовки к использованию extas'a.
 3. Устанавливаем extas: `/vendor/bin/extas i -p extas.json`
 
 ## Использование сценария
