@@ -16,5 +16,5 @@ interface IAlice extends IItem
     /**
      * @return mixed
      */
-    public static function run();
+    public function run();
 }
