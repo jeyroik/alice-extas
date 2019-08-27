@@ -66,16 +66,16 @@
   ],
   "extensions": [
     {
-      "interface": "extas\\interfaces\\extensions\\alice\\cards\\ICardExtensionImageSingle",
-      "class": "extas\\components\\extensions\\alice\\cards\\CardExtensionImageSingle",
+      "interface": "extas\\interfaces\\extensions\\alice\\responses\\cards\\ICardExtensionImageSingle",
+      "class": "extas\\components\\extensions\\alice\\responses\\cards\\CardExtensionImageSingle",
       "subject": "alice.response.card",
       "methods": [
         "getImageId", "setImageId"
       ]
     },
     {
-      "interface": "extas\\interfaces\\extensions\\alice\\cards\\ICardExtensionImageList",
-      "class": "extas\\components\\extensions\\alice\\cards\\CardExtensionImageList",
+      "interface": "extas\\interfaces\\extensions\\alice\\responses\\cards\\ICardExtensionImageList",
+      "class": "extas\\components\\extensions\\alice\\responses\\cards\\CardExtensionImageList",
       "subject": "alice.response.card",
       "methods": [
         "getHeader", "getItems", "getFooter", "setHeader", "setItems", "setFooter", "addItem"
