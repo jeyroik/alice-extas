@@ -99,8 +99,11 @@ class Button extends Item implements IButton
         return $this;
     }
 
+    /**
+     * @return string
+     */
     protected function getSubjectForExtension(): string
     {
-        // TODO: Implement getSubjectForExtension() method.
+        return static::SUBJECT;
     }
 }
