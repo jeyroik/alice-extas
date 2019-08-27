@@ -15,7 +15,7 @@ class PluginInstallCards extends PluginInstallDefault
 {
     protected $selfRepositoryClass = ICardRepository::class;
     protected $selfItemClass = Card::class;
-    protected $selfUID = Card::FIELD__ID;
+    protected $selfUID = Card::FIELD__NAME;
     protected $selfSection = 'cards';
     protected $selfName = 'card';
 }

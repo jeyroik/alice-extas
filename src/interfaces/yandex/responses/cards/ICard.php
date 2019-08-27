@@ -2,6 +2,7 @@
 namespace extas\interfaces\yandex\responses\cards;
 
 use extas\interfaces\IHasName;
+use extas\interfaces\IHasType;
 use extas\interfaces\IItem;
 
 /**
@@ -10,12 +11,9 @@ use extas\interfaces\IItem;
  * @package extas\interfaces\yandex\responses\cards
  * @author jeyroik@gmail.com
  */
-interface ICard extends IItem, IHasName
+interface ICard extends IItem, IHasName, IHasType
 {
     const SUBJECT = 'alice.response.card';
-
-    const FIELD__TYPE = 'type';
-    const FIELD__ID = 'id';
 
     const TYPE__IMAGE_SINGLE = 'BigImage';
     const TYPE__IMAGE_LIST = 'ItemsList';
@@ -26,28 +24,4 @@ interface ICard extends IItem, IHasName
      * @return $this
      */
     public function build();
-
-    /**
-     * @return string
-     */
-    public function getType(): string;
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType(string $type);
-
-    /**
-     * @return string
-     */
-    public function getId(): string;
-
-    /**
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId(string $id);
 }
