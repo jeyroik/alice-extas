@@ -12,7 +12,7 @@ use extas\components\repositories\Repository;
 class CardRepository extends Repository
 {
     protected $itemClass = Card::class;
-    protected $idAs = Card::FIELD__ID;
+    protected $idAs = '';
     protected $pk = Card::FIELD__NAME;
     protected $name = 'cards';
     protected $scope = 'alice';
