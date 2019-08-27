@@ -60,8 +60,12 @@
       "stage": "alice.card.build.BigImage"
     },
     {
-      "class": "extas\\components\\plugins\\alice\\responses\\PluginResponseCardBuildList",
-      "stage": "alice.card.build.ItemsList"
+      "class": "extas\\components\\plugins\\alice\\PluginCallFileJson",
+      "stage": "alice.call.get"
+    },
+    {
+      "class": "extas\\components\\plugins\\alice\\PluginCallPostJson",
+      "stage": "alice.call.get"
     }
   ],
   "extensions": [

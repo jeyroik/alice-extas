@@ -22,13 +22,26 @@ class Alice extends Item implements IAlice
 {
     /**
      * @return mixed
+     * @throws
      */
     public function run()
     {
-        $yandexCall = json_decode(file_get_contents('php://input'), true);
-        $aliceCall = new AliceCall($yandexCall);
+        $yandexCall = [];
+        foreach ($this->getPluginsByStage('alice.call.get') as $plugin) {
+            $plugin($yandexCall);
+        }
 
+        if (empty($yandexCall)) {
+            if ($this->{static::OPTION__THROW_ON_ERROR}) {
+                throw new \Exception('Empty yandex call');
+            } else {
+                return $this;
+            }
+        }
+
+        $aliceCall = new AliceCall($yandexCall);
         $skillId = $aliceCall->getSession()->getSkillId();
+        
         /**
          * @var $skillRepo IAliceSkillRepository
          * @var $skill IAliceSkill
@@ -36,7 +49,7 @@ class Alice extends Item implements IAlice
         $skillRepo = SystemContainer::getItem(IAliceSkillRepository::class);
         $skill = $skillRepo->one([IAliceSkill::FIELD__ID => $skillId]);
 
-        $response = $this->getResponse($yandexCall);
+        $response = $this->getResponse($aliceCall);
         if ($skill) {
             $stage = 'alice.skill.run';
             foreach ($this->getPluginsByStage($stage) as $plugin) {
