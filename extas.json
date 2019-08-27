@@ -2,8 +2,8 @@
   "name": "alice.extas",
   "package_classes": [
     {
-      "interface": "extas\\interfaces\\yandex\\ISkillRepository",
-      "class": "extas\\components\\yandex\\SkillRepository"
+      "interface": "extas\\interfaces\\yandex\\skills\\IAliceSkillRepository",
+      "class": "extas\\components\\yandex\\skills\\AliceSkillRepository"
     },
     {
       "interface": "extas\\interfaces\\yandex\\skills\\steps\\IStepRepository",
@@ -62,7 +62,7 @@
     {
       "class": "extas\\components\\plugins\\alice\\responses\\PluginResponseCardBuildList",
       "stage": "alice.card.build.ItemsList"
-    },
+    }
   ],
   "extensions": [
     {
