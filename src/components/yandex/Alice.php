@@ -57,7 +57,7 @@ class Alice extends Item implements IAlice
                 $plugin($aliceCall, $skill, $response);
             }
         } else {
-            return $this->throwException('Missed skill with id "' . $skillId . '"', $response);
+            return $this->throwException('Missed skill with id ' . $skillId, $response);
         }
 
         return $this->response($response);

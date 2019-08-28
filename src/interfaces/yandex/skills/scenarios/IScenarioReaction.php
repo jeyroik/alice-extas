@@ -16,7 +16,7 @@ interface IScenarioReaction extends IItem
     const SUBJECT = 'alice.skill.scenario.reaction';
 
     const FIELD__CONDITION = 'condition';
-    const FIELD__STEP_NAME = 'step_name';
+    const FIELD__STEP_NAME = 'step';
 
     /**
      * @return null|callable
