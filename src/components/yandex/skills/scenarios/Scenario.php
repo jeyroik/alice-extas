@@ -33,7 +33,7 @@ class Scenario extends Item implements IScenario
         $schema = $this->getSchema();
 
         if (isset($schema['message_' . $messageId])) {
-            $this->playByMessageId($messageId, $schema, $call, $response);
+            $this->playByMessageId('message_' . $messageId, $schema, $call, $response);
         } else {
             $this->playByMessageId(static::REACTION_X, $schema, $call, $response);
         }
