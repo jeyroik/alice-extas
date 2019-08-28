@@ -16,6 +16,6 @@ if (is_file(__DIR__ . '/../.env')) {
 }
 
 $alisa = new \extas\components\yandex\Alice([
-    \extas\components\yandex\Alice::OPTION__THROW_ON_ERROR => true
+    \extas\components\yandex\Alice::OPTION__THROW_ON_ERROR => getenv('ALICE__THROW_ON_ERROR') ?: true
 ]);
 $alisa->run();

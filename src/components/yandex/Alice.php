@@ -35,7 +35,9 @@ class Alice extends Item implements IAlice
             if ($this->{static::OPTION__THROW_ON_ERROR}) {
                 throw new \Exception('Empty yandex call');
             } else {
-                return $this;
+                return $this->response(new AliceResponse([
+                    'error' => 'Empty yandex call'
+                ]));
             }
         }
 
