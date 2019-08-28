@@ -105,7 +105,7 @@ class Alice extends Item implements IAlice
 
         return new AliceResponse([
             IAliceResponse::FIELD__SESSION => [
-                ISession::FIELD__MESSAGE_ID => $requestSession->getMessageId()+1,
+                ISession::FIELD__MESSAGE_ID => $requestSession->getMessageId(),
                 ISession::FIELD__SESSION_ID => $requestSession->getSessionId(),
                 ISession::FIELD__USER_ID => $requestSession->getUserId()
             ],
