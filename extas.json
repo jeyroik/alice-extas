@@ -74,7 +74,8 @@
       "class": "extas\\components\\extensions\\alice\\responses\\cards\\CardExtensionImageSingle",
       "subject": "alice.response.card",
       "methods": [
-        "getImageId", "setImageId"
+        "getImageId", "setImageId", "getButton", "setButton",
+        "getTitle", "setTitle", "getDescription", "setDescription"
       ]
     },
     {
