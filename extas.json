@@ -48,6 +48,10 @@
       "stage": "alice.skill.run"
     },
     {
+      "class": "extas\\components\\plugins\\alice\\skills\\steps\\PluginStepDemoTest",
+      "stage": "test.demo.step.demo.test"
+    },
+    {
       "class": "extas\\components\\plugins\\alice\\skills\\steps\\PluginStepDemoHelp",
       "stage": "test.demo.step.demo.help"
     },
@@ -148,6 +152,9 @@
         "message_x": [{
           "condition": "",
           "step": "demo.help"
+        }, {
+          "condition": "extas\\components\\yandex\\skills\\conditions\\ConditionTest",
+          "step": "demo.test"
         }]
       }
     }
