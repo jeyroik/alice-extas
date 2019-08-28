@@ -41,7 +41,7 @@ class Alice extends Item implements IAlice
 
         $aliceCall = new AliceCall($yandexCall);
         $skillId = $aliceCall->getSession()->getSkillId();
-        
+
         /**
          * @var $skillRepo IAliceSkillRepository
          * @var $skill IAliceSkill

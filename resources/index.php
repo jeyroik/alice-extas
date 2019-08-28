@@ -15,5 +15,7 @@ if (is_file(__DIR__ . '/../.env')) {
     ])->notEmpty();
 }
 
-$alisa = new \extas\components\yandex\Alice();
+$alisa = new \extas\components\yandex\Alice([
+    \extas\components\yandex\Alice::OPTION__THROW_ON_ERROR => true
+]);
 $alisa->run();
