@@ -14,7 +14,7 @@ class AliceSkillRepository extends Repository implements IAliceSkillRepository
 {
     protected $itemClass = AliceSkill::class;
     protected $pk = AliceSkill::FIELD__ID;
-    protected $name = 'skill';
+    protected $name = 'skills';
     protected $scope = 'alice';
     protected $idAs = '';
 }

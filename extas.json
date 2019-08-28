@@ -95,8 +95,7 @@
     {
       "name": "test",
       "description": "Test skill",
-      "id": "test",
-      "type": "scenario"
+      "id": "test"
     }
   ],
   "buttons": [
