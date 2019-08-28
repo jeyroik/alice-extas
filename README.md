@@ -1,7 +1,6 @@
 # alice-extas
 
-Yandex.Alice Extas package
-Работа с навыками Алисы Яндекса на базе extas'a.
+Библиотека для создания навыков для голосового помощника Алисы от компании Яндекс.
 
 Данная библиотека поддерживает сценарии (см. руководство ниже).
 
@@ -11,29 +10,7 @@ Yandex.Alice Extas package
 
 # Использование
 
-## Тестовый запуск
-
-### Устанавливаем всё необходимое
-
-```
-/alice-extas# composer i
-/alice-extas# /vendor/bin/extas i -p extas.json
-/alice-extas# php -S 0.0.0.0:8080 -t resources
-```
-
-Это установит тестовый сценарий и тестовые шаги для него.
-
-### Делаем запрос
-
-Любым любимым инструментом шлём запрос на наш навык:
-
-```POST localhost:8080```
-
-Тело запроса:
-
-- `resources/request.message_1.dist` для проверки запуска приветствия
-- `resources/request.message_x.help.dist` для проверки запуска помощи при неизвестной команде от пользователя
-- `resources/request.message_x.test.dist` для проверки реакции на определённый запрос
+Пример использования библиотеки смотрите в репозитории [alice-extas-example](https://github.com/jeyroik/alice-extas-example "Перейти к alice-extas-example")
 
 ## Реализация навыка
 
