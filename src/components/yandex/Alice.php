@@ -57,7 +57,7 @@ class Alice extends Item implements IAlice
                 $plugin($aliceCall, $skill, $response);
             }
         } else {
-            return $this->throwException('Missed skill with id "' . $skillId . '"');
+            return $this->throwException('Missed skill with id "' . $skillId . '"', $response);
         }
 
         return $this->response($response);
@@ -65,18 +65,20 @@ class Alice extends Item implements IAlice
 
     /**
      * @param $message
+     * @param $response
      *
      * @return Alice
      * @throws \Exception
      */
-    protected function throwException($message)
+    protected function throwException($message, $response = null)
     {
         if ($this->{static::OPTION__THROW_ON_ERROR}) {
             throw new \Exception($message);
         } else {
-            return $this->response(new AliceResponse([
-                AliceResponse::FIELD__TEXT => '[error] ' . $message
-            ]));
+            $response = $response ?: new AliceResponse();
+            $response->setText('[error] ' . $message);
+
+            return $this->response($response);
         }
     }
 
