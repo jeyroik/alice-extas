@@ -33,6 +33,8 @@ class PluginStepDemoStart extends Plugin
         
         if ($card) {
             $response->setCard($card->build());
+        } else {
+            $response->setText('Missed card test.image.list');
         }
     }
 }
