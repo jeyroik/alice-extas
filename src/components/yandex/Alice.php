@@ -32,13 +32,7 @@ class Alice extends Item implements IAlice
         }
 
         if (empty($yandexCall)) {
-            if ($this->{static::OPTION__THROW_ON_ERROR}) {
-                throw new \Exception('Empty yandex call');
-            } else {
-                return $this->response(new AliceResponse([
-                    AliceResponse::FIELD__TEXT => '[error] Empty yandex call'
-                ]));
-            }
+            return $this->throwException('Empty yandex call');
         }
 
         $aliceCall = new AliceCall($yandexCall);
@@ -62,9 +56,28 @@ class Alice extends Item implements IAlice
             foreach ($this->getPluginsByStage($stage) as $plugin) {
                 $plugin($aliceCall, $skill, $response);
             }
+        } else {
+            return $this->throwException('Missed skill with id "' . $skillId . '"');
         }
 
         return $this->response($response);
+    }
+
+    /**
+     * @param $message
+     *
+     * @return Alice
+     * @throws \Exception
+     */
+    protected function throwException($message)
+    {
+        if ($this->{static::OPTION__THROW_ON_ERROR}) {
+            throw new \Exception($message);
+        } else {
+            return $this->response(new AliceResponse([
+                AliceResponse::FIELD__TEXT => '[error] ' . $message
+            ]));
+        }
     }
 
     /**
