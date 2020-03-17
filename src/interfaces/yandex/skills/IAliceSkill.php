@@ -13,8 +13,8 @@ use extas\interfaces\IItem;
  */
 interface IAliceSkill extends IItem, IHasName, IHasDescription
 {
-    const SUBJECT = 'alice.skill';
-    const FIELD__ID = 'id';
+    public const SUBJECT = 'alice.skill';
+    public const FIELD__ID = 'id';
 
     /**
      * @return string

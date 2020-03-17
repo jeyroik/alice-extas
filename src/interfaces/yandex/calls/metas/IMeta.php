@@ -11,12 +11,12 @@ use extas\interfaces\IItem;
  */
 interface IMeta extends IItem
 {
-    const SUBJECT = 'alice.call.meta';
+    public const SUBJECT = 'alice.call.meta';
 
-    const FIELD__LOCALE = 'locale';
-    const FIELD__TIMEZONE = 'timezone';
-    const FIELD__CLIENT_ID = 'client_id';
-    const FIELD__INTERFACES = 'interfaces';
+    public const FIELD__LOCALE = 'locale';
+    public const FIELD__TIMEZONE = 'timezone';
+    public const FIELD__CLIENT_ID = 'client_id';
+    public const FIELD__INTERFACES = 'interfaces';
 
     /**
      * @return string

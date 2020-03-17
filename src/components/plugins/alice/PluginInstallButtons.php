@@ -13,9 +13,9 @@ use extas\interfaces\yandex\responses\buttons\IButtonRepository;
  */
 class PluginInstallButtons extends PluginInstallDefault
 {
-    protected $selfItemClass = Button::class;
-    protected $selfName = 'button';
-    protected $selfSection = 'buttons';
-    protected $selfUID = Button::FIELD__TITLE;
-    protected $selfRepositoryClass = IButtonRepository::class;
+    protected string $selfItemClass = Button::class;
+    protected string $selfName = 'button';
+    protected string $selfSection = 'buttons';
+    protected string $selfUID = Button::FIELD__TITLE;
+    protected string $selfRepositoryClass = IButtonRepository::class;
 }

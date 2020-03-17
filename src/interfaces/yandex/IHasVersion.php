@@ -9,7 +9,7 @@ namespace extas\interfaces\yandex;
  */
 interface IHasVersion
 {
-    const FIELD__VERSION = 'version';
+    public const FIELD__VERSION = 'version';
 
     /**
      * @return string

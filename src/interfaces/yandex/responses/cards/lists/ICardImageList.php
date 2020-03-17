@@ -12,11 +12,11 @@ use extas\interfaces\yandex\responses\cards\singles\ICardImageSingle;
  */
 interface ICardImageList extends ICard
 {
-    const SUBJECT = 'alice.response.card.list';
+    public const SUBJECT = 'alice.response.card.list';
     
-    const FIELD__HEADER = 'header';
-    const FIELD__ITEMS = 'items';
-    const FIELD__FOOTER = 'footer';
+    public const FIELD__HEADER = 'header';
+    public const FIELD__ITEMS = 'items';
+    public const FIELD__FOOTER = 'footer';
 
     /**
      * @return IListHeader

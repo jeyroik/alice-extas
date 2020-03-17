@@ -15,11 +15,11 @@ use extas\interfaces\yandex\IHasVersion;
  */
 interface IAliceCall extends IItem, IHasVersion
 {
-    const SUBJECT = 'yandex.alice.call';
+    public const SUBJECT = 'yandex.alice.call';
 
-    const FIELD__META = 'meta';
-    const FIELD__REQUEST = 'request';
-    const FIELD__SESSION = 'session';
+    public const FIELD__META = 'meta';
+    public const FIELD__REQUEST = 'request';
+    public const FIELD__SESSION = 'session';
 
     /**
      * @return IMeta

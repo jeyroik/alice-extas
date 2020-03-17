@@ -22,7 +22,7 @@ class ListFooter extends Item implements IListFooter
      * 
      * @var string 
      */
-    protected $buttonClass = SingleButton::class;
+    protected string $buttonClass = SingleButton::class;
 
     /**
      * @return string

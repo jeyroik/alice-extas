@@ -11,13 +11,13 @@ use extas\interfaces\IItem;
  */
 interface ISession extends IItem
 {
-    const SUBJECT = 'yandex.call.session';
+    public const SUBJECT = 'yandex.call.session';
 
-    const FIELD__IS_NEW = 'new';
-    const FIELD__MESSAGE_ID = 'message_id';
-    const FIELD__SESSION_ID = 'session_id';
-    const FIELD__SKILL_ID = 'skill_id';
-    const FIELD__USER_ID = 'user_id';
+    public const FIELD__IS_NEW = 'new';
+    public const FIELD__MESSAGE_ID = 'message_id';
+    public const FIELD__SESSION_ID = 'session_id';
+    public const FIELD__SKILL_ID = 'skill_id';
+    public const FIELD__USER_ID = 'user_id';
 
     /**
      * @return bool

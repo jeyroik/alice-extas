@@ -11,18 +11,18 @@ use extas\interfaces\yandex\calls\requests\nlu\INLUValue;
  */
 interface IValueDatetime extends INLUValue
 {
-    const SUBJECT = 'alice.call.request.nlu.value.datetime';
+    public const SUBJECT = 'alice.call.request.nlu.value.datetime';
 
-    const FIELD__MINUTE = 'minute';
-    const FIELD__MINUTE_IS_RELATIVE = 'minute_is_relative';
-    const FIELD__HOUR = 'hour';
-    const FIELD__HOUR_IS_RELATIVE = 'hour_is_relative';
-    const FIELD__DAY = 'day';
-    const FIELD__DAY_IS_RELATIVE = 'day_is_relative';
-    const FIELD__MONTH = 'month';
-    const FIELD__MONTH_IS_RELATIVE = 'month_is_relative';
-    const FIELD__YEAR = 'year';
-    const FIELD__YEAR_IS_RELATIVE = 'year_is_relative';
+    public const FIELD__MINUTE = 'minute';
+    public const FIELD__MINUTE_IS_RELATIVE = 'minute_is_relative';
+    public const FIELD__HOUR = 'hour';
+    public const FIELD__HOUR_IS_RELATIVE = 'hour_is_relative';
+    public const FIELD__DAY = 'day';
+    public const FIELD__DAY_IS_RELATIVE = 'day_is_relative';
+    public const FIELD__MONTH = 'month';
+    public const FIELD__MONTH_IS_RELATIVE = 'month_is_relative';
+    public const FIELD__YEAR = 'year';
+    public const FIELD__YEAR_IS_RELATIVE = 'year_is_relative';
 
     /**
      * @return int

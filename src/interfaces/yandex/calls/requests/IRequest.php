@@ -11,17 +11,17 @@ use extas\interfaces\IItem;
  */
 interface IRequest extends IItem
 {
-    const SUBJECT = 'alice.call.request';
+    public const SUBJECT = 'alice.call.request';
 
-    const FIELD__COMMAND = 'command';
-    const FIELD__ORIGINAL_UTTERANCE = 'original_utterance';
-    const FIELD__TYPE = 'type';
-    const FIELD__MARKUP = 'markup';
-    const FIELD__PAYLOAD = 'payload';
-    const FIELD__NLU = 'nlu';
+    public const FIELD__COMMAND = 'command';
+    public const FIELD__ORIGINAL_UTTERANCE = 'original_utterance';
+    public const FIELD__TYPE = 'type';
+    public const FIELD__MARKUP = 'markup';
+    public const FIELD__PAYLOAD = 'payload';
+    public const FIELD__NLU = 'nlu';
 
-    const TYPE__VOICE = 'SimpleUtterance';
-    const TYPE__BUTTON = 'ButtonPressed';
+    public const TYPE__VOICE = 'SimpleUtterance';
+    public const TYPE__BUTTON = 'ButtonPressed';
 
     /**
      * @return string

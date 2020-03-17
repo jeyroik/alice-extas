@@ -16,12 +16,12 @@ use extas\interfaces\yandex\skills\IAliceSkill;
  */
 interface IScenario extends IItem, IHasName, IHasDescription
 {
-    const SUBJECT = 'alice.skill.scenario';
+    public const SUBJECT = 'alice.skill.scenario';
 
-    const FIELD__SCHEMA = 'schema';
-    const FIELD__SKILL_NAME = 'skill_name';
+    public const FIELD__SCHEMA = 'schema';
+    public const FIELD__SKILL_NAME = 'skill_name';
 
-    const REACTION_X = 'message_x';
+    public const REACTION_X = 'message_x';
 
     /**
      * @param $messageId
@@ -30,7 +30,7 @@ interface IScenario extends IItem, IHasName, IHasDescription
      *
      * @return void
      */
-    public function play($messageId, IAliceCall $call, IAliceResponse &$response);
+    public function play($messageId, IAliceCall $call, IAliceResponse &$response): void;
 
     /**
      * @return array
@@ -52,12 +52,12 @@ interface IScenario extends IItem, IHasName, IHasDescription
      *
      * @return $this
      */
-    public function setSchema(array $schema);
+    public function setSchema(array $schema): IScenario;
 
     /**
      * @param string $skillName
      *
      * @return $this
      */
-    public function setSkillName(string $skillName);
+    public function setSkillName(string $skillName): IScenario;
 }

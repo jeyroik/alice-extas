@@ -11,9 +11,9 @@ use extas\components\repositories\Repository;
  */
 class ScenarioRepository extends Repository
 {
-    protected $scope = 'alice';
-    protected $name = 'scenarios';
-    protected $pk = Scenario::FIELD__NAME;
-    protected $idAs = '';
-    protected $itemClass = Scenario::class;
+    protected string $scope = 'alice';
+    protected string $name = 'scenarios';
+    protected string $pk = Scenario::FIELD__NAME;
+    protected string $idAs = '';
+    protected string $itemClass = Scenario::class;
 }

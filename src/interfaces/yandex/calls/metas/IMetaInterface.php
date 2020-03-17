@@ -12,7 +12,7 @@ use extas\interfaces\IItem;
  */
 interface IMetaInterface extends IItem, IHasName
 {
-    const SUBJECT = 'alice.call.meta.interface';
+    public const SUBJECT = 'alice.call.meta.interface';
 
-    const INTERFACE__SCREEN = 'screen';
+    public const INTERFACE__SCREEN = 'screen';
 }

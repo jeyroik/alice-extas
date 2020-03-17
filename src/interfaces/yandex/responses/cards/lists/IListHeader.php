@@ -11,5 +11,5 @@ use extas\interfaces\IItem;
  */
 interface IListHeader extends IItem, IHasText
 {
-    const SUBJECT = 'alice.response.card.list.header';
+    public const SUBJECT = 'alice.response.card.list.header';
 }

@@ -12,9 +12,9 @@ use extas\interfaces\yandex\skills\IAliceSkillRepository;
  */
 class AliceSkillRepository extends Repository implements IAliceSkillRepository
 {
-    protected $itemClass = AliceSkill::class;
-    protected $pk = AliceSkill::FIELD__ID;
-    protected $name = 'skills';
-    protected $scope = 'alice';
-    protected $idAs = '';
+    protected string $itemClass = AliceSkill::class;
+    protected string $pk = AliceSkill::FIELD__ID;
+    protected string $name = 'skills';
+    protected string $scope = 'alice';
+    protected string $idAs = '';
 }

@@ -13,5 +13,5 @@ use extas\interfaces\IItem;
  */
 interface IStep extends IItem, IHasName, IHasDescription
 {
-    const SUBJECT = 'alice.skill.step';
+    public const SUBJECT = 'alice.skill.step';
 }

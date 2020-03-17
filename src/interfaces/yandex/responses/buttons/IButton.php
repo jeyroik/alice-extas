@@ -13,12 +13,12 @@ use extas\interfaces\yandex\calls\requests\IRequestPayload;
  */
 interface IButton extends IItem, IHasName
 {
-    const SUBJECT = 'alice.response.button';
+    public const SUBJECT = 'alice.response.button';
 
-    const FIELD__TITLE = 'title';
-    const FIELD__PAYLOAD = 'payload';
-    const FIELD__URL = 'url';
-    const FIELD__IS_HIDE_AFTER_PRESSING = 'hide';
+    public const FIELD__TITLE = 'title';
+    public const FIELD__PAYLOAD = 'payload';
+    public const FIELD__URL = 'url';
+    public const FIELD__IS_HIDE_AFTER_PRESSING = 'hide';
 
     /**
      * Max 64 symbols

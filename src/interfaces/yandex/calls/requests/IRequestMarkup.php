@@ -11,9 +11,9 @@ use extas\interfaces\IItem;
  */
 interface IRequestMarkup extends IItem
 {
-    const SUBJECT = 'alice.call.request.markup';
+    public const SUBJECT = 'alice.call.request.markup';
 
-    const FIELD__IS_DANGEROUS_CONTEXT = 'dangerous_context';
+    public const FIELD__IS_DANGEROUS_CONTEXT = 'dangerous_context';
 
     /**
      * @return bool

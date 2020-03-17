@@ -9,7 +9,7 @@ namespace extas\interfaces\yandex\responses\cards\lists;
  */
 interface IHasText
 {
-    const FIELD__TEXT = 'text';
+    public const FIELD__TEXT = 'text';
 
     /**
      * @return string

@@ -11,11 +11,11 @@ use extas\interfaces\IItem;
  */
 interface ISession extends IItem
 {
-    const SUBJECT = 'alice.response.session';
+    public const SUBJECT = 'alice.response.session';
 
-    const FIELD__SESSION_ID = 'session_id';
-    const FIELD__MESSAGE_ID = 'message_id';
-    const FIELD__USER_ID = 'user_id';
+    public const FIELD__SESSION_ID = 'session_id';
+    public const FIELD__MESSAGE_ID = 'message_id';
+    public const FIELD__USER_ID = 'user_id';
 
     /**
      * @return string

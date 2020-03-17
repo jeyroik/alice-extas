@@ -28,7 +28,7 @@ class Scenario extends Item implements IScenario
      * @param IAliceCall $call
      * @param IAliceResponse $response
      */
-    public function play($messageId, IAliceCall $call, IAliceResponse &$response)
+    public function play($messageId, IAliceCall $call, IAliceResponse &$response): void
     {
         $schema = $this->getSchema();
 
@@ -118,7 +118,7 @@ class Scenario extends Item implements IScenario
      *
      * @return $this
      */
-    public function setSchema(array $schema)
+    public function setSchema(array $schema): IScenario
     {
         $this->config[static::FIELD__SCHEMA] = $schema;
 
@@ -130,7 +130,7 @@ class Scenario extends Item implements IScenario
      *
      * @return $this
      */
-    public function setSkillName(string $skillName)
+    public function setSkillName(string $skillName): IScenario
     {
         $this->config[static::FIELD__SKILL_NAME] = $skillName;
 

@@ -13,9 +13,9 @@ use extas\interfaces\yandex\skills\steps\IStepRepository;
  */
 class PluginInstallSteps extends PluginInstallDefault
 {
-    protected $selfRepositoryClass = IStepRepository::class;
-    protected $selfItemClass = Step::class;
-    protected $selfUID = Step::FIELD__TITLE;
-    protected $selfSection = 'steps';
-    protected $selfName = 'step';
+    protected string $selfRepositoryClass = IStepRepository::class;
+    protected string $selfItemClass = Step::class;
+    protected string $selfUID = Step::FIELD__TITLE;
+    protected string $selfSection = 'steps';
+    protected string $selfName = 'step';
 }

@@ -11,5 +11,5 @@ use extas\interfaces\IItem;
  */
 interface IRequestPayload extends IItem
 {
-    const SUBJECT = 'alice.call.request.payload';
+    public const SUBJECT = 'alice.call.request.payload';
 }

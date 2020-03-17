@@ -11,5 +11,5 @@ use extas\interfaces\yandex\responses\buttons\IHasButton;
  */
 interface IListFooter extends IItem, IHasText, IHasButton
 {
-    const SUBJECT = 'alice.response.card.list.footer';
+    public const SUBJECT = 'alice.response.card.list.footer';
 }

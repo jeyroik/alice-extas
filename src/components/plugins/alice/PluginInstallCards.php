@@ -13,9 +13,9 @@ use extas\interfaces\yandex\responses\cards\ICardRepository;
  */
 class PluginInstallCards extends PluginInstallDefault
 {
-    protected $selfRepositoryClass = ICardRepository::class;
-    protected $selfItemClass = Card::class;
-    protected $selfUID = Card::FIELD__NAME;
-    protected $selfSection = 'cards';
-    protected $selfName = 'card';
+    protected string $selfRepositoryClass = ICardRepository::class;
+    protected string $selfItemClass = Card::class;
+    protected string $selfUID = Card::FIELD__NAME;
+    protected string $selfSection = 'cards';
+    protected string $selfName = 'card';
 }

@@ -12,9 +12,9 @@ use extas\interfaces\yandex\skills\steps\IStepRepository;
  */
 class StepRepository extends Repository implements IStepRepository
 {
-    protected $itemClass = Step::class;
-    protected $idAs = '';
-    protected $pk = Step::FIELD__NAME;
-    protected $name = 'steps';
-    protected $scope = 'alice';
+    protected string $itemClass = Step::class;
+    protected string $idAs = '';
+    protected string $pk = Step::FIELD__NAME;
+    protected string $name = 'steps';
+    protected string $scope = 'alice';
 }

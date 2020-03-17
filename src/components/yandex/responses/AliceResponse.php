@@ -111,7 +111,7 @@ class AliceResponse extends Item implements IAliceResponse
      *
      * @return $this
      */
-    public function setSession(ISession $session)
+    public function setSession(ISession $session): IAliceResponse
     {
         $this->config[static::FIELD__SESSION] = $session->__toArray();
 
@@ -123,7 +123,7 @@ class AliceResponse extends Item implements IAliceResponse
      *
      * @return $this
      */
-    public function setButtons(array $buttons)
+    public function setButtons(array $buttons): IAliceResponse
     {
         $buttonsData = [];
 
@@ -143,7 +143,7 @@ class AliceResponse extends Item implements IAliceResponse
      *
      * @return $this
      */
-    public function addButton(IButton $button)
+    public function addButton(IButton $button): IAliceResponse
     {
         $this->config[static::FIELD__BUTTONS] = $this->config[static::FIELD__BUTTONS] ?? [];
         $this->config[static::FIELD__BUTTONS][] = $button->__toArray();
@@ -156,7 +156,7 @@ class AliceResponse extends Item implements IAliceResponse
      *
      * @return $this
      */
-    public function setCard(ICard $card)
+    public function setCard(ICard $card): IAliceResponse
     {
         $this->config[static::FIELD__CARD] = $card->__toArray();
 
@@ -168,7 +168,7 @@ class AliceResponse extends Item implements IAliceResponse
      *
      * @return $this
      */
-    public function setText(string $text)
+    public function setText(string $text): IAliceResponse
     {
         $this->config[static::FIELD__TEXT] = $text;
 
@@ -180,7 +180,7 @@ class AliceResponse extends Item implements IAliceResponse
      *
      * @return $this
      */
-    public function setTts(string $tts)
+    public function setTts(string $tts): IAliceResponse
     {
         $this->config[static::FIELD__TTS] = $tts;
 
@@ -192,7 +192,7 @@ class AliceResponse extends Item implements IAliceResponse
      *
      * @return $this
      */
-    public function setIsEndOfTalking(bool $isEndOfTalking)
+    public function setIsEndOfTalking(bool $isEndOfTalking): IAliceResponse
     {
         $this->config[static::FIELD__IS_END_OF_TALKING] = $isEndOfTalking;
 

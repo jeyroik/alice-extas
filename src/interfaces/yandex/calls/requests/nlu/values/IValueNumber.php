@@ -15,18 +15,18 @@ use extas\interfaces\yandex\calls\requests\nlu\INLUValue;
  */
 interface IValueNumber extends INLUValue
 {
-    const SUBJECT = 'alice.call.request.nlu.value.number';
+    public const SUBJECT = 'alice.call.request.nlu.value.number';
 
-    const FIELD__VALUE = 'value';
+    public const FIELD__VALUE = 'value';
 
-    const CON__EQUAL = 0;
-    const CON__NOT_EQUAL = 1;
-    const CON__GREATER = 2;
-    const CON__LOWER = 3;
-    const CON__GREATER_OR_EQUAL = 4;
-    const CON__LOWER_OR_EQUAL = 5;
-    const CON__IS_EMPTY = 6;
-    const CON__LIKE = 7;
+    public const CON__EQUAL = 0;
+    public const CON__NOT_EQUAL = 1;
+    public const CON__GREATER = 2;
+    public const CON__LOWER = 3;
+    public const CON__GREATER_OR_EQUAL = 4;
+    public const CON__LOWER_OR_EQUAL = 5;
+    public const CON__IS_EMPTY = 6;
+    public const CON__LIKE = 7;
 
     /**
      * @return float

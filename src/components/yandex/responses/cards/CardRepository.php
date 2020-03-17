@@ -11,9 +11,9 @@ use extas\components\repositories\Repository;
  */
 class CardRepository extends Repository
 {
-    protected $itemClass = Card::class;
-    protected $idAs = '';
-    protected $pk = Card::FIELD__NAME;
-    protected $name = 'cards';
-    protected $scope = 'alice';
+    protected string $itemClass = Card::class;
+    protected string $idAs = '';
+    protected string $pk = Card::FIELD__NAME;
+    protected string $name = 'cards';
+    protected string $scope = 'alice';
 }

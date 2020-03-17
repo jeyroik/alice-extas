@@ -11,11 +11,11 @@ use extas\interfaces\yandex\calls\requests\nlu\INLUValue;
  */
 interface IValueFio extends INLUValue
 {
-    const SUBJECT = 'alice.call.request.nlu.value.fio';
+    public const SUBJECT = 'alice.call.request.nlu.value.fio';
 
-    const FIELD__FIRST_NAME = 'first_name';
-    const FIELD__LAST_NAME = 'last_name';
-    const FIELD__PATRONYMIC_NAME = 'patronymic_name';
+    public const FIELD__FIRST_NAME = 'first_name';
+    public const FIELD__LAST_NAME = 'last_name';
+    public const FIELD__PATRONYMIC_NAME = 'patronymic_name';
 
     /**
      * @return string

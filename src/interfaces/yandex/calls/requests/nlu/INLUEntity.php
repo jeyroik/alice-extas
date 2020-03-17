@@ -11,19 +11,19 @@ use extas\interfaces\IItem;
  */
 interface INLUEntity extends IItem
 {
-    const SUBJECT = 'alice.call.request.nlu.entity';
+    public const SUBJECT = 'alice.call.request.nlu.entity';
 
-    const FIELD__TOKENS = 'tokens';
-    const FIELD__TOKENS_START = 'start';
-    const FIELD__TOKENS_END = 'end';
-    const FIELD__TYPE = 'type';
-    const FIELD__VALUE = 'value';
-    const FIELD__NLU = 'nlu';
+    public const FIELD__TOKENS = 'tokens';
+    public const FIELD__TOKENS_START = 'start';
+    public const FIELD__TOKENS_END = 'end';
+    public const FIELD__TYPE = 'type';
+    public const FIELD__VALUE = 'value';
+    public const FIELD__NLU = 'nlu';
 
-    const TYPE__GEO = 'YANDEX.GEO';
-    const TYPE__FIO = 'YANDEX.FIO';
-    const TYPE__NUMBER = 'YANDEX.NUMBER';
-    const TYPE__DATETIME = 'YANDEX.DATETIME';
+    public const TYPE__GEO = 'YANDEX.GEO';
+    public const TYPE__FIO = 'YANDEX.FIO';
+    public const TYPE__NUMBER = 'YANDEX.NUMBER';
+    public const TYPE__DATETIME = 'YANDEX.DATETIME';
 
     /**
      * @return string

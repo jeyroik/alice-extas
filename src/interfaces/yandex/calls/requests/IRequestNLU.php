@@ -12,12 +12,12 @@ use extas\interfaces\yandex\calls\requests\nlu\INLUEntity;
  */
 interface IRequestNLU extends IItem
 {
-    const SUBJECT = 'alice.call.request.nlu';
+    public const SUBJECT = 'alice.call.request.nlu';
 
-    const FIELD__TOKENS = 'tokens';
-    const FIELD__ENTITIES = 'entities';
+    public const FIELD__TOKENS = 'tokens';
+    public const FIELD__ENTITIES = 'entities';
 
-    const INDEX__LAST = 'last';
+    public const INDEX__LAST = 'last';
 
     /**
      * @param int $startIndex

@@ -13,9 +13,9 @@ use extas\interfaces\yandex\skills\scenarios\IScenarioRepository;
  */
 class PluginInstallScenarios extends PluginInstallDefault
 {
-    protected $selfRepositoryClass = IScenarioRepository::class;
-    protected $selfItemClass = Scenario::class;
-    protected $selfUID = Scenario::FIELD__NAME;
-    protected $selfSection = 'scenarios';
-    protected $selfName = 'scenario';
+    protected string $selfRepositoryClass = IScenarioRepository::class;
+    protected string $selfItemClass = Scenario::class;
+    protected string $selfUID = Scenario::FIELD__NAME;
+    protected string $selfSection = 'scenarios';
+    protected string $selfName = 'scenario';
 }

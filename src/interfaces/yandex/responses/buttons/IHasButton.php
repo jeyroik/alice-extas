@@ -9,7 +9,7 @@ namespace extas\interfaces\yandex\responses\buttons;
  */
 interface IHasButton
 {
-    const FIELD__BUTTON = 'button';
+    public const FIELD__BUTTON = 'button';
 
     /**
      * @return IButton

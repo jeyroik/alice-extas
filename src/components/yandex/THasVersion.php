@@ -1,5 +1,6 @@
 <?php
 namespace extas\components\yandex;
+
 use extas\interfaces\yandex\IHasVersion;
 
 /**

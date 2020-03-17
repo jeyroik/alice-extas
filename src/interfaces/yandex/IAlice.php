@@ -11,9 +11,9 @@ use extas\interfaces\IItem;
  */
 interface IAlice extends IItem
 {
-    const SUBJECT = 'yandex.alice';
+    public const SUBJECT = 'yandex.alice';
 
-    const OPTION__THROW_ON_ERROR = 'throw_on_error';
+    public const OPTION__THROW_ON_ERROR = 'throw_on_error';
 
     /**
      * @return mixed

@@ -13,12 +13,12 @@ use extas\interfaces\IItem;
  */
 interface ICard extends IItem, IHasName, IHasType
 {
-    const SUBJECT = 'alice.response.card';
+    public const SUBJECT = 'alice.response.card';
 
-    const TYPE__IMAGE_SINGLE = 'BigImage';
-    const TYPE__IMAGE_LIST = 'ItemsList';
+    public const TYPE__IMAGE_SINGLE = 'BigImage';
+    public const TYPE__IMAGE_LIST = 'ItemsList';
 
-    const STAGE__CARD_BUILD = 'alice.card.build';
+    public const STAGE__CARD_BUILD = 'alice.card.build';
 
     /**
      * @return $this

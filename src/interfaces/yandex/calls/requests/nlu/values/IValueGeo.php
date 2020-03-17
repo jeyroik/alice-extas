@@ -11,16 +11,16 @@ use extas\interfaces\yandex\calls\requests\nlu\INLUValue;
  */
 interface IValueGeo extends INLUValue
 {
-    const SUBJECT = 'alice.call.request.nlu.value.geo';
+    public const SUBJECT = 'alice.call.request.nlu.value.geo';
 
-    const FIELD__COUNTRY = 'country';
-    const FIELD__CITY = 'city';
-    const FIELD__HOUSE_NUMBER = 'house_number';
-    const FIELD__STREET = 'street';
-    const FIELD__FLAT = 'flat';
-    const FIELD__LONGITUDE = 'lng';
-    const FIELD__LATITUDE = 'lat';
-    const FIELD__AIRPORT = 'airport';
+    public const FIELD__COUNTRY = 'country';
+    public const FIELD__CITY = 'city';
+    public const FIELD__HOUSE_NUMBER = 'house_number';
+    public const FIELD__STREET = 'street';
+    public const FIELD__FLAT = 'flat';
+    public const FIELD__LONGITUDE = 'lng';
+    public const FIELD__LATITUDE = 'lat';
+    public const FIELD__AIRPORT = 'airport';
 
     /**
      * @return string

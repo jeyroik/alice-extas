@@ -13,9 +13,9 @@ use extas\interfaces\yandex\skills\IAliceSkillRepository;
  */
 class PluginInstallSkills extends PluginInstallDefault
 {
-    protected $selfName = 'skill';
-    protected $selfSection = 'skills';
-    protected $selfUID = AliceSkill::FIELD__ID;
-    protected $selfItemClass = AliceSkill::class;
-    protected $selfRepositoryClass = IAliceSkillRepository::class;
+    protected string $selfName = 'skill';
+    protected string $selfSection = 'skills';
+    protected string $selfUID = AliceSkill::FIELD__ID;
+    protected string $selfItemClass = AliceSkill::class;
+    protected string $selfRepositoryClass = IAliceSkillRepository::class;
 }

@@ -12,9 +12,9 @@ use extas\interfaces\yandex\responses\buttons\IButtonRepository;
  */
 class ButtonRepository extends Repository implements IButtonRepository
 {
-    protected $scope = 'alice';
-    protected $name = 'buttons';
-    protected $pk = Button::FIELD__NAME;
-    protected $idAs = '';
-    protected $itemClass = Button::class;
+    protected string $scope = 'alice';
+    protected string $name = 'buttons';
+    protected string $pk = Button::FIELD__NAME;
+    protected string $idAs = '';
+    protected string $itemClass = Button::class;
 }

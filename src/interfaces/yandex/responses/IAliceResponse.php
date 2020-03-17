@@ -15,14 +15,14 @@ use extas\interfaces\yandex\responses\sessions\ISession;
  */
 interface IAliceResponse extends IItem, IHasVersion
 {
-    const SUBJECT = 'alice.response';
+    public const SUBJECT = 'alice.response';
 
-    const FIELD__TEXT = 'text';
-    const FIELD__TTS = 'tts';
-    const FIELD__BUTTONS = 'buttons';
-    const FIELD__CARD = 'card';
-    const FIELD__IS_END_OF_TALKING = 'end_session';
-    const FIELD__SESSION = 'session';
+    public const FIELD__TEXT = 'text';
+    public const FIELD__TTS = 'tts';
+    public const FIELD__BUTTONS = 'buttons';
+    public const FIELD__CARD = 'card';
+    public const FIELD__IS_END_OF_TALKING = 'end_session';
+    public const FIELD__SESSION = 'session';
 
     /**
      * Max 1024 symbols
@@ -67,40 +67,40 @@ interface IAliceResponse extends IItem, IHasVersion
      * 
      * @return $this
      */
-    public function setTts(string $tts);
+    public function setTts(string $tts): IAliceResponse;
 
     /**
      * @param array $buttons
      * 
      * @return $this
      */
-    public function setButtons(array $buttons);
+    public function setButtons(array $buttons): IAliceResponse;
 
     /**
      * @param IButton $button
      * 
      * @return $this
      */
-    public function addButton(IButton $button);
+    public function addButton(IButton $button): IAliceResponse;
 
     /**
      * @param ICard $card
      * 
      * @return $this
      */
-    public function setCard(ICard $card);
+    public function setCard(ICard $card): IAliceResponse;
 
     /**
      * @param bool $isEndOfTalking
      * 
      * @return $this
      */
-    public function setIsEndOfTalking(bool $isEndOfTalking);
+    public function setIsEndOfTalking(bool $isEndOfTalking): IAliceResponse;
 
     /**
      * @param ISession $session
      * 
      * @return $this
      */
-    public function setSession(ISession $session);
+    public function setSession(ISession $session): IAliceResponse;
 }
